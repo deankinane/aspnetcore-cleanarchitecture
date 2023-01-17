@@ -7,6 +7,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="logs\**" />
+	  <Content Remove="logs\**" />
+	  <EmbeddedResource Remove="logs\**" />
+	  <None Remove="logs\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -32,10 +39,6 @@
 		<ProjectReference Include="..\..\core\GloboTicket.TicketManagement.Application\GloboTicket.TicketManagement.Application.csproj" />
 		<ProjectReference Include="..\..\infrastructure\GloboTicket.TicketManagement.Infrastructure\GloboTicket.TicketManagement.Infrastructure.csproj" />
 		<ProjectReference Include="..\..\infrastructure\GloboTicket.TicketManagement.Persistence\GloboTicket.TicketManagement.Persistence.csproj" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <Folder Include="logs\" />
 	</ItemGroup>
 
 </Project>

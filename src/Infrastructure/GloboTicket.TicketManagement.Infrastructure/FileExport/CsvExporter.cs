@@ -11,7 +11,7 @@ namespace GloboTicket.TicketManagement.Infrastructure.FileExport
             using var memoryStream = new MemoryStream();
             using (var streamWriter = new StreamWriter(memoryStream))
             {
-                using var csvWriter = new CsvWriter(streamWriter);
+                using var csvWriter = new CsvWriter(streamWriter, System.Globalization.CultureInfo.InvariantCulture);
                 csvWriter.WriteRecords(eventExportDtos);
             }
 
